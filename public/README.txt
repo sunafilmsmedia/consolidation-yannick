@@ -9,6 +9,7 @@ Conseil : une image carrée (ex. 400x400) donne le meilleur rendu en cercle.
 Le PNG fonctionne aussi — renomme-le broker-photo.jpg ou change PHOTO_SRC dans
 src/components/ui/BrokerCard.tsx vers "/broker-photo.png".
 
-Pense aussi à ajouter le logo de l'agence de Yannick (public/logo.png) et à
-rebrancher la balise <img> dans src/app/page.tsx (actuellement un logo texte
-en attendant le vrai fichier).
+Logo Multi-Prêts Hypothèques déjà en place : public/logo-white.png (version
+blanche, utilisée telle quelle sur le fond marine de l'accueil). Référence
+de marque (couleurs) conservée hors du dossier public dans
+brand-reference.png, à la racine du projet.

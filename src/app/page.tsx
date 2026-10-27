@@ -1,20 +1,14 @@
 import Thermometer from "@/components/ui/Thermometer";
 import BrokerCard from "@/components/ui/BrokerCard";
 import TrackedLink from "@/components/ui/TrackedLink";
-import { calculatorConfig } from "@/lib/config";
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black via-[#04130f] to-black text-white">
-      {/* En-tête avec logo */}
-      {/* TODO: remplacer par le vrai logo de l'agence de Yannick (public/logo.png
-          + reprendre la balise <img> ci-dessous) quand il sera fourni. */}
+    <main className="min-h-screen bg-gradient-to-b from-black via-[#04101c] to-black text-white">
+      {/* En-tête avec logo Multi-Prêts (blanc, directement sur le fond marine) */}
       <header className="mx-auto flex max-w-[1280px] justify-center px-6 pt-8 lg:justify-start">
-        <span className="inline-flex rounded-xl bg-white px-3 py-2 shadow-card">
-          <span className="text-sm font-extrabold text-[#04130f]">
-            {calculatorConfig.brokerName}
-          </span>
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo-white.png" alt="Multi-Prêts Hypothèques" className="h-12 w-auto" />
       </header>
 
       <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-6 py-10 lg:flex-row lg:items-center lg:py-16">

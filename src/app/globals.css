@@ -5,8 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap");
 
 :root {
-  --ink: #04110e;
-  --neon: #00c9a7;
+  --ink: #04101c;
+  --neon: #75bb23;
 }
 
 html,
@@ -17,9 +17,9 @@ body {
 }
 
 @layer components {
-  /* Dégradé animé "propulsé par l'IA" — palette verte/blanche */
+  /* Dégradé animé "propulsé par l'IA" — palette verte/blanche Multi-Prêts */
   .ai-gradient-text {
-    background: linear-gradient(90deg, #00897b, #00c9a7, #ffffff, #00897b);
+    background: linear-gradient(90deg, #4a9c2b, #75bb23, #ffffff, #4a9c2b);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -34,6 +34,6 @@ body {
     font-style: italic;
     font-weight: 400;
     color: var(--neon);
-    text-shadow: 0 0 10px rgba(0, 201, 167, 0.4), 0 0 24px rgba(0, 201, 167, 0.2);
+    text-shadow: 0 0 10px rgba(117, 187, 35, 0.4), 0 0 24px rgba(117, 187, 35, 0.2);
   }
 }

@@ -5,13 +5,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#04110E", // noir profond teinté teal
-        brand: "#00897B", // teal Alliance Hypothécaire (principal)
-        ai: "#00B29C", // teal plus clair (partenaire de dégradé)
-        neon: "#00C9A7", // teal lumineux (accents sur fond foncé)
-        savings: "#00C9A7",
+        ink: "#04101C", // noir profond teinté bleu marine
+        brand: "#4A9C2B", // vert foncé Multi-Prêts (principal)
+        ai: "#75BB23", // vert vif Multi-Prêts (partenaire de dégradé)
+        neon: "#75BB23", // vert lumineux (accents sur fond foncé)
+        savings: "#75BB23",
         alert: "#F97316",
-        surface: "#0b0f0c",
+        surface: "#0A1A26",
         muted: "#94a3b8",
       },
       fontFamily: {
@@ -20,8 +20,8 @@ const config: Config = {
       },
       boxShadow: {
         card: "0 10px 40px -12px rgba(0, 0, 0, 0.6)",
-        glow: "0 0 0 1px rgba(0,201,167,0.35), 0 0 28px -4px rgba(0,201,167,0.5)",
-        neon: "0 0 24px -2px rgba(0,201,167,0.6)",
+        glow: "0 0 0 1px rgba(117,187,35,0.35), 0 0 28px -4px rgba(117,187,35,0.5)",
+        neon: "0 0 24px -2px rgba(117,187,35,0.6)",
       },
       keyframes: {
         gradientMove: {

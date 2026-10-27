@@ -152,7 +152,7 @@ export default function CalculatorForm() {
 
   if (submitting) {
     return (
-      <main className="min-h-screen bg-gradient-to-b from-black via-[#04130f] to-black text-white">
+      <main className="min-h-screen bg-gradient-to-b from-black via-[#04101c] to-black text-white">
         <LoadingAI />
       </main>
     );
@@ -162,7 +162,7 @@ export default function CalculatorForm() {
   // s'applique pas. On arrête le parcours ici, sans générer de lead.
   if (notOwner) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-gradient-to-b from-black via-[#04130f] to-black px-6 text-white">
+      <main className="flex min-h-screen items-center justify-center bg-gradient-to-b from-black via-[#04101c] to-black px-6 text-white">
         <div className="max-w-lg animate-fadeUp text-center">
           <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-white/5 text-2xl">
             🔑
@@ -203,13 +203,13 @@ export default function CalculatorForm() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black via-[#04130f] to-black text-white">
+    <main className="min-h-screen bg-gradient-to-b from-black via-[#04101c] to-black text-white">
       <div className="mx-auto grid max-w-[1280px] gap-10 px-6 py-10 lg:grid-cols-[1fr_360px] lg:py-16">
         <div>
           {/* Estimation en direct — visible en haut sur mobile seulement */}
           {showMobilePreview && (
             <div className="sticky top-3 z-20 mb-5 lg:hidden">
-              <div className="rounded-2xl border border-neon/30 bg-[#04130f]/90 px-4 py-3 text-center shadow-glow backdrop-blur">
+              <div className="rounded-2xl border border-neon/30 bg-[#04101c]/90 px-4 py-3 text-center shadow-glow backdrop-blur">
                 <span className="ai-gradient-text text-[10px] font-bold uppercase tracking-wide">
                   Estimation en direct
                 </span>

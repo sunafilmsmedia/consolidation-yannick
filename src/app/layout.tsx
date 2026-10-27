@@ -9,10 +9,7 @@ export const metadata: Metadata = {
 };
 
 // Meta (Facebook) Pixel — per-déploiement, change selon le courtier.
-// TODO: Yannick n'a pas encore fourni son pixel — à poser ici (et en var
-// d'env Vercel) quand il le donnera. Tant que c'est vide, aucun script
-// n'est injecté.
-const META_PIXEL_ID = "";
+const META_PIXEL_ID = "1416704416957075";
 
 // Microsoft Clarity — per-déploiement, change selon le courtier.
 // TODO: idem, à créer sur clarity.microsoft.com et poser ici.

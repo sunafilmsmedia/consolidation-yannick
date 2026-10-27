@@ -5,10 +5,14 @@ import TrackedLink from "@/components/ui/TrackedLink";
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-[#04101c] to-black text-white">
-      {/* En-tête avec logo Multi-Prêts (blanc, directement sur le fond marine) */}
-      <header className="mx-auto flex max-w-[1280px] justify-center px-6 pt-8 lg:justify-start">
+      {/* En-tête : logo de Yannick (blanc, à gauche) + logo du cabinet Multi-Prêts (à droite) */}
+      <header className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-center gap-4 px-6 pt-8 lg:justify-between">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo-white.png" alt="Multi-Prêts Hypothèques" className="h-12 w-auto" />
+        <img src="/logo-white.png" alt="Yannick Charette, courtier hypothécaire" className="h-12 w-auto" />
+        <span className="inline-flex rounded-xl bg-white px-3 py-2 shadow-card">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-multiprets.png" alt="Multi-Prêts Hypothèques" className="h-10 w-auto" />
+        </span>
       </header>
 
       <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-6 py-10 lg:flex-row lg:items-center lg:py-16">

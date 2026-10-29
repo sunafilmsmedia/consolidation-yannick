@@ -2,6 +2,7 @@ import type { CalculatorInput, CalculatorResult } from "@/types/calculator";
 import { LEVEL_LABELS } from "./scoring";
 import {
   DEBT_TYPE_LABELS,
+  INCOME_LABELS,
   PRIMARY_GOAL_LABELS,
   USER_STATUS_LABELS,
 } from "./format";
@@ -86,8 +87,13 @@ export function buildCrmPayload(
       monthlyDebtPayment: result.estimatedCurrentDebtPayment,
       estimatedMonthlySavings: result.estimatedMonthlySavings,
       estimatedAnnualSavings: result.estimatedAnnualSavings,
+      hasMortgage: input.hasMortgage ? "Oui" : "Non",
       propertyValue: input.propertyValue ?? 0,
       mortgageBalance: input.mortgageBalance ?? 0,
+      mortgageMonthlyPayment: input.mortgageMonthlyPayment ?? 0,
+      householdIncomeRange: input.householdIncomeRange
+        ? INCOME_LABELS[input.householdIncomeRange] ?? input.householdIncomeRange
+        : "Non fourni",
       potentialCashAvailable: result.potentialCashAvailable ?? 0,
       savingsScore: result.savingsScore,
       potentialLevel: LEVEL_LABELS[result.potentialLevel],

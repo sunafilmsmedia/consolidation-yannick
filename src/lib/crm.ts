@@ -103,20 +103,22 @@ export interface CrmSyncResult {
   error?: string;
 }
 
-// Webhook GoHighLevel / LeadConnector qui reçoit les leads qualifiés.
-// Fixé ici volontairement (et non via variable d'env) pour garantir la
-// destination, peu importe ce qui traîne dans la config Vercel.
-const CRM_WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/T87h9vZRiTxHm8XuOaMq/webhook-trigger/7a6316bd-7389-4c20-9849-2c6f47e00472";
-
 /**
- * Envoi du lead au CRM (POST JSON vers le webhook GoHighLevel/LeadConnector).
+ * Envoi du lead au CRM (POST JSON vers le webhook GoHighLevel/LeadConnector
+ * de Yannick, dans CRM_WEBHOOK_URL). Si la variable est vide, on logue le
+ * payload côté serveur au lieu de l'envoyer (mode stub, voir README/.env.example).
  * Un échec CRM ne doit jamais bloquer l'utilisateur (le lead est quand même
  * retourné à la personne).
  */
 export async function sendToCrm(payload: CrmPayload): Promise<CrmSyncResult> {
+  const webhookUrl = process.env.CRM_WEBHOOK_URL;
+  if (!webhookUrl) {
+    console.log("[CRM STUB] CRM_WEBHOOK_URL vide — lead non envoyé :", JSON.stringify(payload));
+    return { ok: true };
+  }
+
   try {
-    const res = await fetch(CRM_WEBHOOK_URL, {
+    const res = await fetch(webhookUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
